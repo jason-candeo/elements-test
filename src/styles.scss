@@ -1,0 +1,38 @@
+/* You can add global styles to this file, and also import other style files */
+
+.container {
+    height: 50vh;
+}
+
+img[ccimg] {
+    opacity: 0;
+}
+
+cc-img-container {
+    .cc-img-container {
+        position: relative;
+
+        img {
+            transition: 0.5s opacity ease;
+        }
+
+        &[class*='applied'] {
+            img {
+                opacity: 1;
+            }
+        }
+
+        &::after {
+            content: '';
+            position: absolute;
+            z-index: 10;
+
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+
+            border: 1px solid red;
+        }
+    }
+}

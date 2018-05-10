@@ -1,0 +1,12 @@
+.cc-img-container {
+    width: 100%;
+    height: 100%;
+
+    overflow: hidden;
+
+    &[class*='applied'] {
+        img[ccimg] {
+            opacity: 1;
+        }
+    }
+}
